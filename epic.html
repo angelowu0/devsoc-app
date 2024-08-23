@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    background-color: rgb(252, 127, 127);
+    padding: 0px;
+    text-align: left;
+    font-size: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: -10px;
+    position: sticky;
+    top: -1px;
+    z-index: 1000;
+}
+
+header nav {
+    background-color: rgb(252, 127, 127);
+    text-align: left;
+    font-size: 25px;
+    color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuoptions:hover {
+    background-color: rgb(126, 83, 83);
+}
+
+.info {
+    margin: 0;
+    background-color: rgb(255, 214, 214); 
+    margin: -10px; 
+    margin-top: -35px;
+}
+
+.textonimage-container {
+    position: relative;
+    text-align: center;
+    height: auto;
+    display: block;
+}
+
+.hoverable-image {
+    margin: -10px;
+    transition: filter 0.3s ease;
+}
+
+.left-centre-text {
+    display: block;
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.textonimage-container:hover .left-centre-text {
+    opacity: 1;
+}
+
+.textonimage-container:hover .right-centre-text {
+    opacity: 1;
+}
+
+.textonimage-container:hover .hoverable-image{
+    filter: blur(8px);
+}
+
+.right-centre-text {
+    position: absolute;
+    top: 100%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.centre-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+}
+
+.centre-appearing-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.textonimage-container:hover .centre-appearing-text {
+    opacity: 1;
+}
+
+section {
+    height: auto;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+    background-color: rgb(76, 0, 0);
+    margin: -10px;
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li style="margin-left: 2%; background-color: rgb(80, 48, 48);"><a href="">The Website</a></li>
+            <li><a class="menuoptions" href="#about">About</a></li>
+            <li><a class="menuoptions" href="#celestial">Celestial Objects</a></li>
+            <li><a class="menuoptions" href="#games">Games</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="info" id="about">
+    <h1 style="margin-left: 5%; padding-top: 50px; font-size: 50px;">Hello, I'm Angelo Wu!<hr></h1>
+    <p style="margin-left: 7%; padding-top: 0px; padding-bottom: 50px; font-size: 20px; margin-right: 7%;">
+        I am a first year computer science/science (physics) student!
+        <br><br>
+        I enjoy playing games in my free time (mainly Roblox because it's free), I am also interested in astronomy and as such enjoy staring at the sky.
+    </p>
+</div>
+
+<div class="textonimage-container">
+    <img src="assets/images/world-harmony.png" alt="people holding hands on the earth" style="width: 102%; margin-top: -10px; margin-left: -29px;">
+    <div class="centre-text" style="top: 50%;">World Harmony</div>
+</div>
+
+<section>
+    <div>
+        <h1 style="margin-left: 5%;" id="celestial">Celestial Bodies<hr></h1>
+        <div class="textonimage-container">
+            <img src="assets/images/IMG_E0589.JPG" class="hoverable-image" alt="Picture of the moon" style="width: 50%; float: left; margin: -10px;">
+            <div class="left-centre-text" style="top: 200px; font-size: 100px; left: 25%; color: white;">Moon 🌙</div>
+        </div>
+        
+        
+        <div class="textonimage-container">
+            <img src="assets/images/IMG_0586.JPG" class="hoverable-image" alt="Picture of the sun" style="width: 50%; float: right; margin: -10px;">
+            <div class="right-centre-text" style="top: 200px; font-size: 50px; left: 75%; color: black;">Sun 😎 (don't look directly at the sun it is not a very good idea)</div>
+        </div>
+    </div>
+</section>
+
+<div class="textonimage-container">
+    <img src="assets/images/world-discord.png" alt="people crying on planet discord" style="width: 100%; margin-top: 20px; clear: both;">
+    <div class="centre-text" style="color: red; top: 70%; font-size: 70px;">World Discord</div>
+    <p>this is a very funny joke i know</p>
+</div>
+
+<div>
+    <h1 style="margin-left: 5%;" id="games">Games I've Played<hr></h1>
+    <div class="textonimage-container" style="margin: 100px;">
+        <img src="assets/gifs/lol.gif" alt="GIF of Roblox character being flung away by closet" style="width: 70%; margin-left: auto; margin-right: auto; display: block;" class="hoverable-image">
+        <div class="centre-appearing-text" style="top: 50%; font-size: 100px; left: 50%; color: white;">Roblox</div>
+    </div>
+    <div class="textonimage-container" style="margin: 100px;">
+        <img src="assets/gifs/enderman.gif" alt="GIF of enderman chasing player in minecraft up stairs" style="width: 70%; margin-left: auto; margin-right: auto; display: block;" class="hoverable-image">
+        <div class="centre-appearing-text" style="top: 50%; font-size: 100px; left: 50%; color: white;">Minecraft</div>
+    </div>
+</div>
+
+<footer>
+    <ul>
+        <li><a class="menuoptions" href="https://github.com/llamas-united" target="_blank">Github</a></li>
+        <li><a class="menuoptions" href="https://www.linkedin.com/in/angelo-wu-155885323/" target="_blank">Linkedin</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
